@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.paint.*?>
@@ -11,11 +12,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.collections.FXCollections?>
 
-<VBox prefHeight="416.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="416.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FitnessForYouController">
    <children>
       <Label prefHeight="63.0" prefWidth="194.0" text="fitness for you" textOverrun="LEADING_WORD_ELLIPSIS">
          <VBox.margin>
-            <Insets left="210.0" />
+            <Insets left="230.0" />
          </VBox.margin>
          <effect>
             <Lighting bumpInput="$null">
@@ -43,7 +44,7 @@
                   <Insets top="30.0" />
                </HBox.margin>
             </Label>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="weekExerciseChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="150.0" top="25.0" />
                </HBox.margin>
@@ -52,18 +53,18 @@
       </HBox>
       <HBox prefHeight="146.0" prefWidth="586.0">
          <children>
-            <Button mnemonicParsing="false" text="Calculate BMI">
+            <Button mnemonicParsing="false" onAction="#bmiCalculate" text="Calculate BMI">
                <HBox.margin>
-                  <Insets left="490.0" />
+                  <Insets left="190.0" top="50.0" />
                </HBox.margin>
             </Button>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" text="Display Workout">
+            <Button mnemonicParsing="false" onAction="#workoutDisplay" text="Display Workout">
                <HBox.margin>
-                  <Insets left="225.0" top="70.0" />
+                  <Insets left="250.0" top="70.0" />
                </HBox.margin>
             </Button>
          </children>
